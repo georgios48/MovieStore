@@ -6,6 +6,7 @@
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.Models/obj/Debug/net8.0/MovieStore.Models.AssemblyInfoInputs.cache
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.Models/obj/Debug/net8.0/MovieStore.Models.AssemblyInfo.cs
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.Models/obj/Debug/net8.0/MovieStore.Models.csproj.CoreCompileInputs.cache
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.Models/obj/Debug/net8.0/MovieStore.Models.sourcelink.json
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.Models/obj/Debug/net8.0/MovieStore.Models.dll
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.Models/obj/Debug/net8.0/refint/MovieStore.Models.dll
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.Models/obj/Debug/net8.0/MovieStore.Models.pdb
