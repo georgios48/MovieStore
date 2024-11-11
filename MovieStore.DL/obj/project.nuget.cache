@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5xHa7NnMWv8=",
+  "success": true,
+  "projectFilePath": "/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/MovieStore.DL.csproj",
+  "expectedPackageFiles": [
+    "/Users/georgiossemerdziev/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

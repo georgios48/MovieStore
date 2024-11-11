@@ -1,0 +1,5 @@
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.csproj.AssemblyReference.cache
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.AssemblyInfoInputs.cache
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.AssemblyInfo.cs
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.csproj.CoreCompileInputs.cache
