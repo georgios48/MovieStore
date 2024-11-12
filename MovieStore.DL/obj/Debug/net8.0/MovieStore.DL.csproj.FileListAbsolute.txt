@@ -4,3 +4,13 @@
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.AssemblyInfo.cs
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.csproj.CoreCompileInputs.cache
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.sourcelink.json
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/bin/Debug/net8.0/MovieStore.DL.deps.json
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/bin/Debug/net8.0/MovieStore.DL.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/bin/Debug/net8.0/MovieStore.DL.pdb
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/bin/Debug/net8.0/MovieStore.Models.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/bin/Debug/net8.0/MovieStore.Models.pdb
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieSto.54BE3797.Up2Date
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/refint/MovieStore.DL.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/MovieStore.DL.pdb
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore.DL/obj/Debug/net8.0/ref/MovieStore.DL.dll
