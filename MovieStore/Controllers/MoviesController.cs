@@ -32,7 +32,7 @@ namespace MovieStore.Controllers
             _movieService.AddMovie(movieDto);
         }
 
-        [HttpGet("GetById")]
+        [HttpGet("GetMovieById")]
         public Movie? GetById(int id)
         {
             return _movieService.GetMovieById(id);
@@ -49,6 +49,12 @@ namespace MovieStore.Controllers
         {
             var movieDto = _mapper.Map<Movie>(movieRequest);
             _movieService.UpdateMovie(movieDto);
+        }
+
+        [HttpGet("GetActorById")]
+        public Actor? GetActorById(int id)
+        {
+            return _movieService.GetActorById(id);
         }
     }
 }

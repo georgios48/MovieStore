@@ -11,5 +11,8 @@ public class MapsterConfiguration
         TypeAdapterConfig<Movie, AddMovieRequest>
             .NewConfig()
             .TwoWays();
+        TypeAdapterConfig<Movie, UpdateMovieRequest>
+            .NewConfig()
+            .TwoWays();
     }
 }
