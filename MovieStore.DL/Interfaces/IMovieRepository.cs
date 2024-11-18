@@ -9,6 +9,6 @@ namespace MovieStore.DL.Interfaces
 
         Movie? GetMovieById(int id);
         void DeleteMovie(int id);
-        //void UpdateMovie(Movie movie);
+        void UpdateMovie(Movie movie);
     }
 }

@@ -38,3 +38,6 @@
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/obj/Debug/net8.0/MovieStore.pdb
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/obj/Debug/net8.0/MovieStore.genruntimeconfig.cache
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/obj/Debug/net8.0/ref/MovieStore.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Mapster.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Mapster.Core.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Mapster.DependencyInjection.dll

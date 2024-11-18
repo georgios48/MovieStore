@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "eht0KU4soP4=",
+  "dgSpecHash": "Z51fIjd1Rgg=",
   "success": true,
   "projectFilePath": "/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/MovieStore.csproj",
   "expectedPackageFiles": [
+    "/Users/georgiossemerdziev/.nuget/packages/mapster/7.4.1-pre01/mapster.7.4.1-pre01.nupkg.sha512",
+    "/Users/georgiossemerdziev/.nuget/packages/mapster.core/1.2.2-pre01/mapster.core.1.2.2-pre01.nupkg.sha512",
+    "/Users/georgiossemerdziev/.nuget/packages/mapster.dependencyinjection/1.0.2-pre01/mapster.dependencyinjection.1.0.2-pre01.nupkg.sha512",
     "/Users/georgiossemerdziev/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/georgiossemerdziev/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
     "/Users/georgiossemerdziev/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
