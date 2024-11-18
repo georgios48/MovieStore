@@ -30,5 +30,12 @@ namespace MovieStore.DL.Repositories
                 InMemoryDb.Movies.Remove(movie);
             }
         }
+
+        public void UpdateMovie(Movie movie)
+        {
+            var movieToUpdate = InMemoryDb.Movies.FirstOrDefault(m => m.Id == movie.Id);
+            movieToUpdate!.Title = movie.Title;
+            movieToUpdate!.Year = movie.Year;
+        }
     }
 }

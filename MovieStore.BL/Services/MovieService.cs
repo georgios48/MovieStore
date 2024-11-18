@@ -7,12 +7,14 @@ namespace MovieStore.BL.Services
     public class MovieService : IMovieService
     {
         private readonly IMovieRepository _movieRepository;
+        private readonly IActorRepository _actorRepository;
 
         public Guid Id { get; set; }
 
-        public MovieService(IMovieRepository movieRepository)
+        public MovieService(IMovieRepository movieRepository, IActorRepository actorRepository)
         {
             _movieRepository = movieRepository;
+            _actorRepository = actorRepository;
             Id = Guid.NewGuid();
         }
         
@@ -34,6 +36,16 @@ namespace MovieStore.BL.Services
         public void DeleteMovie(int id)
         {
             _movieRepository.DeleteMovie(id);
+        }
+
+        public void UpdateMovie(Movie movie)
+        {
+            _movieRepository.UpdateMovie(movie);
+        }
+
+        public Actor? GetActorById(int id)
+        {
+            return _actorRepository.GetActorById(id);
         }
     }
 }
