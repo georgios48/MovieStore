@@ -41,3 +41,16 @@
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Mapster.dll
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Mapster.Core.dll
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Mapster.DependencyInjection.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/FluentValidation.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.AspNetCore.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Extensions.Hosting.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Extensions.Logging.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Formatting.Compact.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Settings.Configuration.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Sinks.Console.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Sinks.File.dll
