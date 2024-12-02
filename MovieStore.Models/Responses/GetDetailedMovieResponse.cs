@@ -1,10 +1,9 @@
 using MovieStore.Models.DTO;
+using MovieStore.Models.View;
 
 namespace MovieStore.Models.Responses;
 
 public class GetDetailedMovieResponse
 {
-    public Movie Movie { get; set; }
-    
-    public List<Actor> Actors { get; set; }
+    IEnumerable<MoviesView> Movies { get; set; } = new List<MoviesView>();
 }
