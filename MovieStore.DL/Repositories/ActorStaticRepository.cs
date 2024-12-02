@@ -4,7 +4,7 @@ using MovieStore.Models.DTO;
 
 namespace MovieStore.DL.Repositories;
 
-public class ActorRepository : IActorRepository
+public class ActorStaticRepository : IActorRepository
 {
     public Actor? GetActorById(int actorId)
     {
