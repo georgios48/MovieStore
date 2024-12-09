@@ -67,10 +67,10 @@ namespace MovieStore.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult? GetById(int id)
+        public IActionResult? GetById(string id)
         {
             _logger.LogInformation($"Getting movie by id: {id}");
-            if (id <= 0)
+            if (id.Length == 0)
             {
                 _logger.LogError($"Getting movie by id: {id}");
                 return BadRequest("Id is invalid, must be greater than zero.");
@@ -88,9 +88,9 @@ namespace MovieStore.Controllers
         [HttpDelete("Delete")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
-            if (id <= 0)
+            if (id.Length == 0)
             {
                 return BadRequest("Id is invalid, must be greater than zero.");
             }

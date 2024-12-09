@@ -24,7 +24,6 @@ public class BusinessService : IBusinessService
 
         foreach (var movie in allMovies)
         {
-            var movieActors = new List<Actor>(movie.Actors.Count());
             var movieView = new MoviesView()
             {
                 MovieId = movie.Id,
@@ -32,14 +31,10 @@ public class BusinessService : IBusinessService
                 MovieTitle = movie.Title,
             };
             // Append actors
-            foreach (var actorId in movie.Actors)
-            {
-                var actorDto = _actorRepository.GetActorById(actorId);
-                movieActors.Add(actorDto);
-            }
-            
-            // append the actors to the movie
-            movieView.Actors = movieActors;
+            var actors = _actorRepository.GetActorsById(movie.Actors);
+
+            // Set the actors to the movie
+            movieView.Actors = actors;
             
             result.Add(movieView);
         }

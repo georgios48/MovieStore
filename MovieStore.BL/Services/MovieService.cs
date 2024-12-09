@@ -28,12 +28,12 @@ namespace MovieStore.BL.Services
             _movieRepository.AddMovie(movie);
         }
 
-        public Movie? GetMovieById(int id)
+        public Movie? GetMovieById(string id)
         {
             return _movieRepository.GetMovieById(id);
         }
 
-        public void DeleteMovie(int id)
+        public void DeleteMovie(string id)
         {
             _movieRepository.DeleteMovie(id);
         }
