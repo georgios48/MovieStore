@@ -22,7 +22,7 @@ namespace MovieStore.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("GetDetailedMovie")]
+        [HttpGet("GetAllDetailedMovie")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetDetailedMovieInfo()

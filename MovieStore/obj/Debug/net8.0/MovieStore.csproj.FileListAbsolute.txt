@@ -54,3 +54,11 @@
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Sinks.Console.dll
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Serilog.Sinks.File.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/DnsClient.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/MongoDB.Bson.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/MongoDB.Driver.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/SharpCompress.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Snappier.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/ZstdSharp.dll

@@ -10,4 +10,9 @@
     <ProjectReference Include="..\MovieStore.Models\MovieStore.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="3.1.0" />
+  </ItemGroup>
+
 </Project>
