@@ -17,6 +17,20 @@ public class BusinessService : IBusinessService
         _movieRepository = movieRepository;
     }
 
+    public void AddActor(string movieId, string actorId)
+    {
+        var movie = _movieRepository.GetMovieById(movieId);
+
+        if (movie == null)
+        {
+            throw new Exception($"Movie with id: {movieId} does not exist");
+        }
+        
+        _actorRepository.AddActorToMovie(actorId, movie);
+        
+        _movieRepository.UpdateMovie(movie);
+    }
+
     public IEnumerable<MoviesView> GetDetailedMovies()
     {
         var result = new List<MoviesView>();

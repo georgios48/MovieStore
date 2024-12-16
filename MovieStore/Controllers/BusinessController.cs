@@ -35,5 +35,25 @@ namespace MovieStore.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet("AddActorToMovie")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult AddActorToMovie(string actorId, string movieId)
+        {
+            try
+            {
+                _businessService.AddActor(movieId, actorId);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                return BadRequest(ex.Message);
+            }
+            
+
+            return Ok();
+        }
+        
     }
 }

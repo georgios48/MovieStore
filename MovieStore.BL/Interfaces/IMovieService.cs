@@ -10,6 +10,6 @@ namespace MovieStore.BL.Interfaces
         Movie? GetMovieById(string id);
         void DeleteMovie(string id);
         void UpdateMovie(Movie movie);
-        Actor? GetActorById(int id);
+        Actor? GetActorById(string id);
     }
 }

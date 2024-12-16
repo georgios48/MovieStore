@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MovieStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+972919a44e8bf3f2be2d2e9ebcfb7d3f00389f20")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba4e91627c8fc0a074b1fe8e3b65b90c843a814d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MovieStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MovieStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

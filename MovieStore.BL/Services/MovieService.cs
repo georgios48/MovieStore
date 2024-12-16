@@ -43,9 +43,9 @@ namespace MovieStore.BL.Services
             _movieRepository.UpdateMovie(movie);
         }
 
-        public Actor? GetActorById(int id)
+        public Actor? GetActorById(string id)
         {
-            return _actorRepository.GetActorById(id);
+            return _actorRepository.GetActorById(id.ToString());
         }
     }
 }
