@@ -45,7 +45,7 @@ namespace MovieStore.BL.Services
 
         public Actor? GetActorById(int id)
         {
-            return _actorRepository.GetActorById(id);
+            return _actorRepository.GetActorById(id.ToString());
         }
     }
 }

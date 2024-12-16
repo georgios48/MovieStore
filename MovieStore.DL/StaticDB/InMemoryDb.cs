@@ -8,12 +8,12 @@ namespace MovieStore.DL.StaticDB
         {
             new Actor
             {
-                ID = 1,
+                ID = "1",
                 Name = "John Doe"
             },
             new Actor
             {
-                ID = 2,
+                ID = "2",
                 Name = "Some Name"
             }
         };
