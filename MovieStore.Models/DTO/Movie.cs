@@ -8,6 +8,6 @@
 
         public int Year { get; set; }
 
-        public IEnumerable<string> Actors { get; set; } = new List<string>();
+        public List<string> Actors { get; set; } = new List<string>();
     }
 }

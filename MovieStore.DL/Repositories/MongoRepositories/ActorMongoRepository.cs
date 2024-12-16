@@ -15,16 +15,28 @@ public class ActorMongoRepository : IActorRepository
     {
         var client = new MongoClient(mongoDbConfiguration.CurrentValue.ConnectionString);
         var database = client.GetDatabase(mongoDbConfiguration.CurrentValue.DatabaseName);
-        _actorCollection = database.GetCollection<Actor>(mongoDbConfiguration.CurrentValue.DatabaseName);
+        _actorCollection = database.GetCollection<Actor>($"{nameof(Actor)}s");
     }
 
     public Actor? GetActorById(string actorId)
     {
-        return _actorCollection.Find(actor => actor.ID == actorId).FirstOrDefault();
+        return _actorCollection.Find(actor => actor.Id == actorId).FirstOrDefault();
     }
 
     public List<Actor> GetActorsById(IEnumerable<string> actorIds)
     {
-        return _actorCollection.Find(actor => actorIds.Contains(actor.ID)).ToList();
+        var result =  _actorCollection.Find(actor => actorIds.Contains(actor.Id)).ToList();
+        return result;
+    }
+
+    public void AddActorToMovie(string actorId, Movie movie)
+    {
+        var actor = GetActorById(actorId);
+
+        if (actor != null)
+        {
+            movie.Actors.Add(actor.Id);
+        }
+        
     }
 }

@@ -15,7 +15,7 @@ public class MovieMongoRepository : IMovieRepository
     {
         var client = new MongoClient(mongoDbConfiguration.CurrentValue.ConnectionString);
         var database = client.GetDatabase(mongoDbConfiguration.CurrentValue.DatabaseName);
-        _moviesCollection = database.GetCollection<Movie>(mongoDbConfiguration.CurrentValue.DatabaseName);
+        _moviesCollection = database.GetCollection<Movie>($"{nameof(Movie)}s");
     }
     public List<Movie> GetAllMovies()
     {

@@ -6,4 +6,5 @@ public interface IActorRepository
 {
     Actor? GetActorById(string actorId);
     List<Actor> GetActorsById(IEnumerable<string> actorIds);
+    void AddActorToMovie(string actorId, Movie movie);
 }

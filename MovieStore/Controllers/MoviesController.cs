@@ -124,9 +124,9 @@ namespace MovieStore.Controllers
         [HttpGet("GetActorById")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult GetActorById(int id)
+        public IActionResult GetActorById(string id)
         {
-            if (id <= 0)
+            if (string.IsNullOrEmpty(id))
             {
                 return BadRequest("Id is invalid, must be greater than zero.");
             }
