@@ -30,6 +30,11 @@ public class BusinessServiceTests
         {
             Name = "Actor 1", Id = "3dd6277f-bde8-4d77-8958-91600ccb579e"
         },
+        
+        new Actor
+        {
+            Name = "Actor 14", Id = "3dd6277f-bde8-4d77-8958-91600ccb89e"
+        },
     };
 
     [Fact]
@@ -43,7 +48,8 @@ public class BusinessServiceTests
             .Returns(_movies);
 
         _mockActorRepository
-            .Setup(x => x.GetActorsById(actorsIds));
+            .Setup(x => x.GetActorById(actorsIds[0]))
+            .Returns(_actors.FirstOrDefault(a => a.Id == _actors[0].Id));
         
         // Inject
         var businessService = new BusinessService(_mockActorRepository.Object, _mockMovieRepository.Object);
@@ -54,5 +60,50 @@ public class BusinessServiceTests
         // Assert
         Assert.NotNull(result);
         Assert.Equal(_movies.Count, result.Count());
+    }
+
+    [Fact]
+    public void AddActor_Ok()
+    {
+        // Setup
+        List<string> actorsIds = [_actors[1].Id];
+        
+        _mockMovieRepository
+            .Setup(x => x.GetMovieById(_movies[0].Id))
+            .Returns(_movies[0]);
+
+        _mockActorRepository
+            .Setup(x => x.GetActorById(actorsIds[0]));
+            
+        
+        // Inject
+        var businessService = new BusinessService(_mockActorRepository.Object, _mockMovieRepository.Object);
+        
+        // Act
+        businessService.AddActor(_movies[0].Id, actorsIds[0]);
+        
+        // Assert
+        Assert.Equal(3, _movies[0].Actors.Count);
+    }
+    
+    [Fact]
+    public void AddActor_MovieDoesNotExist_ThrowsException()
+    {
+        // Setup
+        List<string> actorsIds = [_actors[1].Id];
+        
+        // Arrange
+        _mockMovieRepository
+            .Setup(x => x.GetMovieById(_movies[0].Id))
+            .Returns((Movie)null!);
+        
+        // Inject
+        var businessService = new BusinessService(_mockActorRepository.Object, _mockMovieRepository.Object);
+
+        // Act & Assert
+        var exception = Assert.Throws<Exception>(() => businessService.AddActor(_movies[0].Id, actorsIds[0]));
+        
+        Assert.Equal($"Movie with id: {_movies[0].Id} does not exist", exception.Message);
+        
     }
 }
