@@ -25,9 +25,9 @@ namespace MovieStore.Controllers
         [HttpGet("GetAll")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            var result = _movieService.GetAllMovies();
+            var result = await _movieService.GetAllMovies();
 
             if (result.Count == 0)
             {
@@ -40,7 +40,7 @@ namespace MovieStore.Controllers
         [HttpPost("Add")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Add(AddMovieRequest movieRequest)
+        public async Task<IActionResult> Add(AddMovieRequest movieRequest)
         {
             var movieDto = _mapper.Map<Movie>(movieRequest);
 
@@ -51,7 +51,7 @@ namespace MovieStore.Controllers
                     return BadRequest("Could not add movie to the database");
                 }
 
-                _movieService.AddMovie(movieDto);
+                await _movieService.AddMovie(movieDto);
                 return Ok("Movie added successfully.");
             }
             catch (System.Exception ex)
@@ -67,7 +67,7 @@ namespace MovieStore.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult? GetById(string id)
+        public async Task<IActionResult?> GetById(string id)
         {
             _logger.LogInformation($"Getting movie by id: {id}");
             if (id.Length == 0)
@@ -75,7 +75,7 @@ namespace MovieStore.Controllers
                 _logger.LogError($"Getting movie by id: {id}");
                 return BadRequest("Id is invalid, must be greater than zero.");
             }
-            var result = _movieService.GetMovieById(id);
+            var result = await _movieService.GetMovieById(id);
 
             if (result == null)
             {
@@ -88,20 +88,20 @@ namespace MovieStore.Controllers
         [HttpDelete("Delete")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Delete(string id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id.Length == 0)
             {
                 return BadRequest("Id is invalid, must be greater than zero.");
             }
-            _movieService.DeleteMovie(id);
+            await _movieService.DeleteMovie(id);
             return Ok("Movie deleted.");
         }
 
         [HttpPut("Update")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Update(UpdateMovieRequest movieRequest)
+        public async Task<IActionResult> Update(UpdateMovieRequest movieRequest)
         {
             var movieDto = _mapper.Map<Movie>(movieRequest);
             try
@@ -111,7 +111,7 @@ namespace MovieStore.Controllers
                     return BadRequest("Could not update movie to the database");
                 }
 
-                _movieService.UpdateMovie(movieDto);
+                await _movieService.UpdateMovie(movieDto);
                 return Ok("Movie updated successfully.");
             }
             catch (System.Exception ex)
@@ -124,13 +124,13 @@ namespace MovieStore.Controllers
         [HttpGet("GetActorById")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult GetActorById(string id)
+        public async Task<IActionResult> GetActorById(string id)
         {
             if (string.IsNullOrEmpty(id))
             {
                 return BadRequest("Id is invalid, must be greater than zero.");
             }
-            var result = _movieService.GetActorById(id);
+            var result = await _movieService.GetActorById(id);
 
             if (result == null)
             {

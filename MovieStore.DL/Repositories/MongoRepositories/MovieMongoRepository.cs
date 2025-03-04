@@ -17,29 +17,31 @@ public class MovieMongoRepository : IMovieRepository
         var database = client.GetDatabase(mongoDbConfiguration.CurrentValue.DatabaseName);
         _moviesCollection = database.GetCollection<Movie>($"{nameof(Movie)}s");
     }
-    public List<Movie> GetAllMovies()
+    public async Task<List<Movie>> GetAllMovies()
     {
-        return _moviesCollection.Find(movie => true).ToList();
+        var result = await _moviesCollection.FindAsync(movie => true);
+        return result.ToList();
     }
 
-    public void AddMovie(Movie movie)
+    public async Task AddMovie(Movie movie)
     {
         movie.Id = Guid.NewGuid().ToString();
-        _moviesCollection.InsertOne(movie);
+        await _moviesCollection.InsertOneAsync(movie);
     }
 
-    public Movie? GetMovieById(string id)
+    public async Task<Movie?> GetMovieById(string id)
     {
-        return _moviesCollection.Find(movie => movie.Id == id).FirstOrDefault();
+        var result = await _moviesCollection.FindAsync(movie => movie.Id == id);
+        return result.FirstOrDefault();
     }
 
-    public void DeleteMovie(string id)
+    public async Task DeleteMovie(string id)
     {
-        _moviesCollection.DeleteOne(movie => movie.Id == id);
+        await _moviesCollection.DeleteOneAsync(movie => movie.Id == id);
     }
     
-    public void UpdateMovie(Movie movie)
+    public async Task UpdateMovie(Movie movie)
     {
-        _moviesCollection.ReplaceOne(movieToEdit => true, movie);
+        await _moviesCollection.ReplaceOneAsync(movieToEdit => true, movie);
     }
 }
