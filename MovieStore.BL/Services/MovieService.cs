@@ -18,34 +18,36 @@ namespace MovieStore.BL.Services
             Id = Guid.NewGuid();
         }
         
-        public List<Movie> GetAllMovies()
+        public async Task<List<Movie>> GetAllMovies()
         {
-            return _movieRepository.GetAllMovies();
+            var result = await _movieRepository.GetAllMovies();
+            return result;
         }
 
-        public void AddMovie(Movie movie)
+        public async Task AddMovie(Movie movie)
         {
-            _movieRepository.AddMovie(movie);
+            await _movieRepository.AddMovie(movie);
         }
 
-        public Movie? GetMovieById(string id)
+        public async Task<Movie?> GetMovieById(string id)
         {
-            return _movieRepository.GetMovieById(id);
+            return await _movieRepository.GetMovieById(id);
         }
 
-        public void DeleteMovie(string id)
+        public async Task DeleteMovie(string id)
         {
-            _movieRepository.DeleteMovie(id);
+            await _movieRepository.DeleteMovie(id);
         }
 
-        public void UpdateMovie(Movie movie)
+        public async Task UpdateMovie(Movie movie)
         {
-            _movieRepository.UpdateMovie(movie);
+            await _movieRepository.UpdateMovie(movie);
         }
 
-        public Actor? GetActorById(string id)
+        public async Task<Actor?> GetActorById(string id)
         {
-            return _actorRepository.GetActorById(id.ToString());
+            var result =  await _actorRepository.GetActorById(id.ToString());
+            return result;
         }
     }
 }

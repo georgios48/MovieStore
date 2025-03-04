@@ -18,15 +18,16 @@ public class ActorMongoRepository : IActorRepository
         _actorCollection = database.GetCollection<Actor>($"{nameof(Actor)}s");
     }
 
-    public Actor? GetActorById(string actorId)
+    public async Task<Actor?> GetActorById(string actorId)
     {
-        return _actorCollection.Find(actor => actor.Id == actorId).FirstOrDefault();
+        var result = await _actorCollection.FindAsync(actor => actor.Id == actorId);
+        return result.FirstOrDefault();
     }
 
-    public List<Actor> GetActorsById(IEnumerable<string> actorIds)
+    public async Task<List<Actor>> GetActorsById(IEnumerable<string> actorIds)
     {
-        var result =  _actorCollection.Find(actor => actorIds.Contains(actor.Id)).ToList();
-        return result;
+        var result =  await _actorCollection.FindAsync(actor => actorIds.Contains(actor.Id));
+        return result.ToList();
     }
 
     public void AddActorToMovie(string actorId, Movie movie)
@@ -35,7 +36,7 @@ public class ActorMongoRepository : IActorRepository
 
         if (actor != null)
         {
-            movie.Actors.Add(actor.Id);
+            movie.Actors.Add(actor.Id.ToString());
         }
         
     }

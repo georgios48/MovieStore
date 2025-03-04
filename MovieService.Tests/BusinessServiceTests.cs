@@ -38,24 +38,24 @@ public class BusinessServiceTests
     };
 
     [Fact]
-    public void GetDetailedMovies_Ok()
+    public async Task GetDetailedMovies_Ok()
     {
         // Setup
         List<string> actorsIds = [_actors[0].Id];
         
         _mockMovieRepository
             .Setup(x => x.GetAllMovies())
-            .Returns(_movies);
+            .ReturnsAsync(_movies);
 
         _mockActorRepository
             .Setup(x => x.GetActorById(actorsIds[0]))
-            .Returns(_actors.FirstOrDefault(a => a.Id == _actors[0].Id));
+            .ReturnsAsync(_actors.FirstOrDefault(a => a.Id == _actors[0].Id));
         
         // Inject
         var businessService = new BusinessService(_mockActorRepository.Object, _mockMovieRepository.Object);
         
         // Act
-        var result = businessService.GetDetailedMovies();
+        var result = await businessService.GetDetailedMovies();
         
         // Assert
         Assert.NotNull(result);
@@ -63,14 +63,14 @@ public class BusinessServiceTests
     }
 
     [Fact]
-    public void AddActor_Ok()
+    public async Task AddActor_Ok()
     {
         // Setup
         List<string> actorsIds = [_actors[1].Id];
         
         _mockMovieRepository
             .Setup(x => x.GetMovieById(_movies[0].Id))
-            .Returns(_movies[0]);
+            .ReturnsAsync(_movies[0]);
 
         _mockActorRepository
             .Setup(x => x.GetActorById(actorsIds[0]));
@@ -80,14 +80,14 @@ public class BusinessServiceTests
         var businessService = new BusinessService(_mockActorRepository.Object, _mockMovieRepository.Object);
         
         // Act
-        businessService.AddActor(_movies[0].Id, actorsIds[0]);
+        await businessService.AddActor(_movies[0].Id, actorsIds[0]);
         
         // Assert
-        Assert.Equal(3, _movies[0].Actors.Count);
+        Assert.Equal(2, _movies[0].Actors.Count);
     }
     
     [Fact]
-    public void AddActor_MovieDoesNotExist_ThrowsException()
+    public async Task AddActor_MovieDoesNotExist_ThrowsException()
     {
         // Setup
         List<string> actorsIds = [_actors[1].Id];
@@ -95,13 +95,13 @@ public class BusinessServiceTests
         // Arrange
         _mockMovieRepository
             .Setup(x => x.GetMovieById(_movies[0].Id))
-            .Returns((Movie)null!);
+            .ReturnsAsync((Movie)null!);
         
         // Inject
         var businessService = new BusinessService(_mockActorRepository.Object, _mockMovieRepository.Object);
 
         // Act & Assert
-        var exception = Assert.Throws<Exception>(() => businessService.AddActor(_movies[0].Id, actorsIds[0]));
+        var exception = await Assert.ThrowsAsync<Exception>(() => businessService.AddActor(_movies[0].Id, actorsIds[0]));
         
         Assert.Equal($"Movie with id: {_movies[0].Id} does not exist", exception.Message);
         

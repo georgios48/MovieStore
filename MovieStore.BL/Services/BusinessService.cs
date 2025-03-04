@@ -17,9 +17,9 @@ public class BusinessService : IBusinessService
         _movieRepository = movieRepository;
     }
 
-    public void AddActor(string movieId, string actorId)
+    public async Task AddActor(string movieId, string actorId)
     {
-        var movie = _movieRepository.GetMovieById(movieId);
+        var movie = await _movieRepository.GetMovieById(movieId);
 
         if (movie == null)
         {
@@ -28,15 +28,15 @@ public class BusinessService : IBusinessService
         
         _actorRepository.AddActorToMovie(actorId, movie);
         
-        _movieRepository.UpdateMovie(movie);
+        await _movieRepository.UpdateMovie(movie);
     }
 
-    public IEnumerable<MoviesView> GetDetailedMovies()
+    public async Task<IEnumerable<MoviesView>> GetDetailedMovies()
     {
-        var result = new List<MoviesView>();
-        var allMovies = _movieRepository.GetAllMovies();
+        var allMovies = await _movieRepository.GetAllMovies();
 
-        foreach (var movie in allMovies)
+        // Create tasks to process movies in parallel
+        var movieTasks = allMovies.Select(async movie =>
         {
             var movieView = new MoviesView()
             {
@@ -44,16 +44,19 @@ public class BusinessService : IBusinessService
                 MovieYear = movie.Year,
                 MovieTitle = movie.Title,
             };
-            // Append actors
-            var actors = _actorRepository.GetActorsById(movie.Actors);
 
-            // Set the actors to the movie
-            movieView.Actors = actors;
-            
-            result.Add(movieView);
-        }
+            // Fetch actors asynchronously
+            var actorsTask = movie.Actors.Select(actorId => _actorRepository.GetActorById(actorId));
 
-        return result;
+            // Assign actors to the movie
+            var actors = await Task.WhenAll(actorsTask);
+            movieView.Actors = actors.ToList();
+        
+            return movieView;
+        }).ToList();
+
+        // Wait for all tasks to complete and return the results
+        return await Task.WhenAll(movieTasks);
     }
 }
 

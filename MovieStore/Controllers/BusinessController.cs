@@ -25,9 +25,9 @@ namespace MovieStore.Controllers
         [HttpGet("GetAllDetailedMovie")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult GetDetailedMovieInfo()
+        public async Task<IActionResult> GetDetailedMovieInfo()
         {
-            var result = _businessService.GetDetailedMovies();
+            var result = await _businessService.GetDetailedMovies();
             if (!result.Any())
             {
                 return NotFound();
@@ -39,11 +39,11 @@ namespace MovieStore.Controllers
         [HttpGet("AddActorToMovie")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult AddActorToMovie(string actorId, string movieId)
+        public async Task<IActionResult> AddActorToMovie(string actorId, string movieId)
         {
             try
             {
-                _businessService.AddActor(movieId, actorId);
+                await _businessService.AddActor(movieId, actorId);
             }
             catch (Exception ex)
             {
