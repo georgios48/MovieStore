@@ -29,7 +29,8 @@ namespace MovieStore
             builder.Services
                 .AddConfigurations(builder.Configuration)
                 .RegisterDataLayer()
-                .RegisterBusinessLayer();
+                .RegisterBusinessLayer()
+                .AddBackgroundServices();
 
             MapsterConfiguration.Configure();
             builder.Services.AddMapster();
