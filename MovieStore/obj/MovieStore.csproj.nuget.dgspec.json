@@ -180,6 +180,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -264,6 +268,10 @@
             "Mapster.DependencyInjection": {
               "target": "Package",
               "version": "[1.0.2-pre01, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Serilog": {
               "target": "Package",
