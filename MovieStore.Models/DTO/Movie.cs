@@ -9,5 +9,6 @@
         public int Year { get; set; }
 
         public List<string> Actors { get; set; } = new List<string>();
+        public DateTime DateInserted { get; set; }
     }
 }

@@ -120,3 +120,8 @@
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieService.Tests/obj/Debug/net8.0/MovieService.Tests.pdb
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieService.Tests/obj/Debug/net8.0/MovieService.Tests.genruntimeconfig.cache
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieService.Tests/obj/Debug/net8.0/ref/MovieService.Tests.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieService.Tests/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieService.Tests/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieService.Tests/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieService.Tests/bin/Debug/net8.0/Microsoft.Extensions.Hosting.Abstractions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieService.Tests/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll

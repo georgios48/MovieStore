@@ -25,6 +25,12 @@ public class MovieMongoRepository : IMovieRepository
 
     public async Task AddMovie(Movie movie)
     {
+        if (movie == null || movie.Actors == null)
+        {
+            return;
+        }
+
+        movie.DateInserted = DateTime.UtcNow;
         movie.Id = Guid.NewGuid().ToString();
         await _moviesCollection.InsertOneAsync(movie);
     }
@@ -43,5 +49,21 @@ public class MovieMongoRepository : IMovieRepository
     public async Task UpdateMovie(Movie movie)
     {
         await _moviesCollection.ReplaceOneAsync(movieToEdit => true, movie);
+    }
+
+    public async Task<IEnumerable<Movie?>> GetMoviesAfterDateTime(DateTime date)
+    {
+        var result = await _moviesCollection.FindAsync(m => m.DateInserted >= date);
+        return await result.ToListAsync();
+    }
+
+    public async Task<IEnumerable<Movie?>> FullLoad()
+    {
+        return await GetAllMovies();
+    }
+
+    public async Task<IEnumerable<Movie?>> DifLoad(DateTime lastExecuted)
+    {
+        return await GetMoviesAfterDateTime(lastExecuted);
     }
 }
