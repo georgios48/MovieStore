@@ -62,3 +62,10 @@
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/SharpCompress.dll
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Snappier.dll
 /Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/ZstdSharp.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Microsoft.Extensions.Hosting.Abstractions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStore/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll

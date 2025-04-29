@@ -11,4 +11,5 @@ public class MoviesView
     public int MovieYear { get; set; }
 
     public List<Actor> Actors { get; set; } = [];
+    public DateTime DateInserted { get; set; }
 }
