@@ -1,0 +1,13 @@
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/bin/Debug/net8.0/MovieStoreB.Models.deps.json
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/bin/Debug/net8.0/MovieStoreB.Models.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/bin/Debug/net8.0/MovieStoreB.Models.pdb
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/MovieStoreB.Models.csproj.AssemblyReference.cache
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/MovieStoreB.Models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/MovieStoreB.Models.AssemblyInfoInputs.cache
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/MovieStoreB.Models.AssemblyInfo.cs
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/MovieStoreB.Models.csproj.CoreCompileInputs.cache
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/MovieStoreB.Models.sourcelink.json
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/MovieStoreB.Models.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/refint/MovieStoreB.Models.dll
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/MovieStoreB.Models.pdb
+/Users/georgiossemerdziev/Desktop/MovieStore/MovieStoreB.Models/obj/Debug/net8.0/ref/MovieStoreB.Models.dll
